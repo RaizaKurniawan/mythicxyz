@@ -27,6 +27,17 @@ describe('Login Error', () => {
     .get('#Email-error').contains("Kolom Email wajib diisi.")
     .get('#Password-error').contains("Kolom Kata Sandi wajib diisi.")
   })
+
+  it('Login Capctha Error', () => {
+      cy.get('#Email').click()
+      .clear()
+      .type('raizakurniawan@gmail.com')
+      cy.get('#Password').click()
+      .clear()
+      .type('Admin12345')
+      cy.get('#buttonLogin > .btn-curve').click()
+  });
+
 })
 
 
