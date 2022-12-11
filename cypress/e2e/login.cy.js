@@ -35,6 +35,7 @@ describe('Login Error', () => {
       cy.get('#Password').click()
       .clear()
       .type('Admin12345')
+      .wait(5000)
       cy.get('#buttonLogin > .btn-curve').click()
   });
 
